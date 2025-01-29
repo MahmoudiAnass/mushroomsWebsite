@@ -1,0 +1,120 @@
+'""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+text-wrap kat3ta littles wla texts kbar .  text-wrap : balance; min tsghr page wktba twsl l9nt katgsm bseh btari9a tkhli ljomla mfhoma 
+
+max-inline-size hadi bhal max-width ; n9dro ndiro limages wla hta ltexts ! 
+max-block-size hadi katmchi verticalement 
+
+
+@layers{} kandirouhom 33la hsab specificity ! ila drna design flayer bhal color red wnfs element 3tnah green flayer khor . wakha dak element ykoun more specific ghadi yebh akhir layer
+to set the order of layers if you want we do @layer kda , kdya , kdawdaw . bhad tari9a madich yhem trtib dyalhom lte7t fkol whda . 79ach hada hwa trtib li ghadi ywli mtb3o css
+
+never make text types what ever type it is in PX never ever 
+
+
+how to design text ? FIGMA gives us PX so we take each one nd we divided it by 16 and use rem
+and then to make the texts responsive we do :
+
+	font-size: clamp(min, preferred, max);   Prefered is the figma size of that element tht we gonna chose , min and max has nothing to do with figma we use them by %
+
+preferred : the figma one as rem
+min : the figma one as rem * 80% tal 90%
+max : the figma one as rem * 120% tal 150% 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+blast min-width : 600px li kandiroha f media query bach nkhdmo 3la desktop ghadi ndiro 
+@media (width > 600px) which means dir hadchi min width ykoun kber
+kayn < > <= >= and even 100px <= width <= 1900px
+
+
+wnta designi mnl2afdal tbda as generic as possible bach man3awdoch nfs chi bzaf btoro9mkhtalfin 
+dakchi 3lach kandiro ndra wnchofo hwayj li moumkin nbdaw bihoum pardefaut wy3awnona ma 2amkan 
+
+chi mrat y9der nbghiw nstyliw h2 bhal h1 wla h3 bhal h2 wla h1 mouhim mnl2ahsan froot dyalna man3tiwch design directl element bhal h1 wla h2 ...
+walakin mnl2afdal nsn3o class khassa bdak design 9bl aslan mankhdmoha f html nwjdo douk smyat bhal .title-heading
+
+Key Rule: When to Use <section>
+A <section> is a logical grouping of content that belongs together under one theme.
+If you remove a part of it, the rest still makes sense.
+It's used to structure the page into meaningful blocks.
+🔹 When to Use <article>
+Use <article> when each piece of content can stand alone outside the page (e.g., blog post, news article, forum post).
+If you remove an <article>, it should still make perfect sense as an independent piece.
+

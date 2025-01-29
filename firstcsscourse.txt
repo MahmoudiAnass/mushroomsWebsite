@@ -1,0 +1,121 @@
+if i have two elements collapsing and each have 1rem of padding ifthey cometogether the diference between those two elements will be 2 rem !
+in margin it's completely different if we have 1 rem of margin and 1 rem of margin the distance between them will be 1 rem !!!
+
+line-height : kanstkhdmoha bach ndirou masafa bin lines fou9 wlteht . 
+line-height : 1.5 mathtajch measurement , hadi direct t3ni anaho dak line li 3ndna drbo f 1.5 
+
+:first-child wla li bhalha : hadou for l2ibn wmachi lparent !! ila 3ndk div wstha bzaf elements . wbaghi element lwla . element hya bdatha li ghadi tdi firstchild !!
+!!!!!!! walakin rah min thoul nthchild rak thder 3la ga3 elements dyal dak l2ab machi dak lelement bdept li rak thder 3lih 
+:nthoftype :  hadi hya li t3tik dak element bdept li rak baghih blmo9arana m3a elements dyalou machi bmo9arana m3a trtib fwst ga3 elements mkhtalfin kima nthchild
+
+
+font-size : 100% t3ni kima rah ; 80% y3ni ysghar b 20%  msize dyalou whya ghadia swa fog 100 swa tehtha 
+aria-hidden = "true" had attribute kandirou fchi class min nbghiha mat9rach lcreen readers . kandirouh l icons !!
+class="sr-only" kandirouh lscreen reader min nbghiw dik lktba t9ra ghi lscreen readers bhal icon hdaha ktba . icon ngl3oha wlktba nkhliwha lscreen readers bseh ngl3o lnas l3adyin
+kandirou icon bouhdha bla ktba hdaha fa9at min dik icon tkon m3rofa	
+
+
+
+<ol reversed tglbhom . start='6' ybda m 6 . type='a' ydirhom horof . type i idir i ii iii 
+
+border box  contain border padding  . so when we say 500px the whole thing is 500 px  
+
+elem > elem y3ni ga3 abna2 moubachirin ldak l2ab maywslch l2ahfad ywsl ghi l2aba2
+
+elem ~ elem y3ni siblings dyal dak elem arahom kamlin 
+elem  elem the right next sibling 
+
+[title] {} hadi tgoul bli kayn wahd attribute title selectih . y3ni title = ""
+[title = "chihaja ] hna katkhtar attribute + value 
+
+nav [class*=""] hadi kandiroha bach ngolo 3tina dik nav li lclass dyalha fiha ay haja mndakchi li drna wst ""
+^= li rbda bdajchi li drna f ""
+$= litkml bdakchi li drna f ""
+nth-child(even wla odd wla 3n yb9a ghadi b 3 wla 4n ... wla 3n+2  wla +1 wla ay 9lwa  +2 kat3ni bda m 2 wb9a ghadi b3 
+nth-last-child() hya dakchi li lfoug reversed ybda mn last child
+
+li::marker{
+
+content:url(svg)
+}
+had rfs ykhlina nkhtchouf f no9at dyal lists wndirohom kima bghina wakha tjib fihom tswirt m9idch tma 
+
+
+for ordered lists : 
+
+list_style_type : upper-roman ; hadi tred trtib bromanya 
+list_style_type : 'icon' wla chi 9lwa ; icon darori tkon wst ' ' machi bhal upper roman
+
+
+<menu> is used with interactivity , which means buttons as in <button> not list of a href . a button is used to execute an action , an a href is used to go to another link
+
+<adress> is for the website info when it's in footer
+<adress> is author info when it's in article 
+<nav> major navigation of the website , not all navigations are nav 
+
+div and span means nothing ! div is block element and span is inline element but both means nooothng
+
+our page should have only 1 H1 
+
+
+:is() more specific 
+:where() less specific
+
+article:is(h2,h3,h4,h5,h6)  blast madir article h1 , article h2 ......
+same fore where 
+
+what if we want to do an exception tho ??
+
+article :is(h2,h3,not(aside h3), h5 ) y3ni dir style lga3 douk h walakin h3 li fwst aside madesignihach
+
+ul :has(li:nth-child(6)){columns 2; }
+
+how this works ? 
+
+normally when we do nth-chil(6) we select the child itself ! 
+but here we are checking if there is 6 li then the style will occure on the ul itself !!!
+columns:2 will give us to columns
+
+---------------------------------
+
+INHERITANCE SPECIFITY CASCADE
+
+inheritance  styling is applying to an element is going to apply to all its descendent 
+specifity   the relevant of a given style to the selected portion of the page . which means what selector is stronger than the other
+cascade  how are styles combined by the browser when they come from different sources 
+
+What inherits ? 
+fonts bga3 dfich dyalhom w color ...
+lists bga3 dfich dyalhom 
+text bga3 dfich dyalhom
+space bga3 dfich dyalhom white space line height letter spacing ...
+and other 
+
+what not inherit ? 
+margin padding background borders display floats positioning
+
+display : none vs visibility : hidden 
+
+display katchd hadak wtgl3o wkaymchi m3ah hta l7ayiz li kan chado
+visibility hwa kaytkhza walakin blassto katb9a
+
+INHERIT PROPERTY :
+so inherit can inherit anything even those who are not inherit !!
+so if a div is have abackroung the element inside it gonna inherit that backgound
+element{
+background-color : inherit}
+the difference is the children of that element will not inherit anything from the parent that was inherinting by the keywor inherit
+
+if the parent have bordoer you can literaly inherit with border in all sides border-bottom ...
+
+!!if we want to inherit everything from the parent we do :
+elem{all : inherit}
+
+all:initial t7yd ay style machi ghi inherited . trdo 9r3 bla hta styling
+all:revert matalan 3ndk a drtlha design wfhover drt revert ghadi kithovri dak design li drt f 'a' bhal ila madrtch ghadi tkhtar kifach a mdyoura normal
+ fbrowser y3ni from user agent stylesheet
+
+all:unset => yadir bhal initial yadir bhal inherit :
+ila kan dak property tinherita farah ghadi dir bhal inherit 
+ila kan dak property matinheritach farah ghadi dir bhal initial
+
